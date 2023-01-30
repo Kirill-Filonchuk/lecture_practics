@@ -1,0 +1,33 @@
+{
+  "name": "lecture_practics",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.17.2",
+    "mongoose": "^6.9.0",
+    "morgan": "^1.10.0",
+    "nanoid": "^4.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server",
+    "start:dev": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kirill-Filonchuk/lecture_practics.git"
+  },
+  "keywords": [],
+  "author": "Kirill Filonchuk <6933964@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kirill-Filonchuk/lecture_practics/issues"
+  },
+  "homepage": "https://github.com/Kirill-Filonchuk/lecture_practics#readme"
+}
