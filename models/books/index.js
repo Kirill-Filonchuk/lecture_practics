@@ -5,6 +5,7 @@ const { randomUUID } = require("node:crypto");
 // console.log(crypto.randomUUID());
 const booksPath = path.join(__dirname, "books.json");
 console.log(booksPath);
+
 const updateBooks = async (books) =>
   await fs.writeFile(booksPath, JSON.stringify(books, null, 2));
 
