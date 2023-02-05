@@ -1,15 +1,18 @@
 const express = require("express");
 const cors = require("cors");
 const logger = require("morgan");
-require("dotenv").config();
-const { PORT } = process.env;
+// require("dotenv").config();
+// const { PORT } = process.env;
 const booksRouters = require("./routes/api/books");
 // console.log(booksRouters);
 const app = express();
 app.use(cors());
 app.use(logger("tiny"));
 app.use(express.json()); // Смотрит, есть ли тело запроса
+
 app.use("/api/books", booksRouters); //this middleware exequit only on router that begin on point path
+
+// сюда попадают ошибки, которые были перехвачены validationBody
 app.use((err, req, res, next) => {
   const { status = 500, message = "Server error" } = err;
   res.status(status).json({ message });
@@ -17,7 +20,7 @@ app.use((err, req, res, next) => {
 
 module.exports = {
   app,
-  PORT,
+  // PORT,
 };
 // app.listen(PORT);
 
